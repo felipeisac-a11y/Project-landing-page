@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Odonto Aurora | Odontologia digital em Boa Vista</title>
+<meta name="description" content="Implantes, lentes, clareamento e alinhadores com planejamento digital. Avaliação gratuita pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--w:#fff;--ice:#EEF5FF;--blue:#0057FF;--cy:#00D0FF;--navy:#03153D;--ink:#0A1F4D;--mut:#4B5F8A;--line:#D5E3FF;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{font-size:16px;scroll-behavior:smooth;scroll-padding-top:5rem}
+@media(min-width:1800px){html{font-size:20px}}
+@media(min-width:2400px){html{font-size:26px}}
+@media(min-width:3200px){html{font-size:34px}}
+@media(max-width:360px){html{font-size:15px}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--w);color:var(--ink);font:400 1rem/1.6 Manrope,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Sora,Manrope,sans-serif;margin:0;line-height:1.08;letter-spacing:-.03em}
+h1{font-size:clamp(2.2rem,6.2vw,5rem);font-weight:800}
+h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:800}
+h3{font-size:1.2rem;font-weight:600}
+p{margin:0}a{color:inherit}
+.w{width:min(100% - 2.5rem,75rem);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;border:0;cursor:pointer;font:700 1rem Manrope;padding:1rem 1.7rem;border-radius:999px;background:linear-gradient(120deg,var(--blue),var(--cy));color:#fff;text-decoration:none;position:relative;overflow:hidden;box-shadow:0 0 0 0 rgba(0,208,255,.6);animation:pulse 2.6s infinite;transition:transform .2s}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+.btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .6s}
+.btn:hover::after{left:130%}
+.btn.ghost{background:transparent;box-shadow:inset 0 0 0 2px currentColor;animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 1.1rem rgba(0,208,255,0)}100%{box-shadow:0 0 0 0 rgba(0,208,255,0)}}
+:focus-visible{outline:3px solid var(--cy);outline-offset:3px}
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);background:rgba(3,21,61,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.12);color:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;height:4.2rem}
+.logo{font:800 1.3rem Sora;text-decoration:none;display:flex;gap:.55rem;align-items:center}
+.nav ul{display:flex;gap:1.8rem;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-weight:600;font-size:.92rem;opacity:.85}.nav ul a:hover{opacity:1;color:var(--cy)}
+.nav .btn{padding:.7rem 1.3rem;font-size:.9rem}
+.bg{display:none;background:none;border:0;color:#fff;font-size:1.7rem;cursor:pointer}
+@media(max-width:900px){.bg{display:block}.nav>.btn{display:none}.nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(3,21,61,.96);padding:1.5rem 1.25rem;gap:1.1rem}.nav ul.open{display:flex}}
+.hero{position:relative;background:radial-gradient(60rem 40rem at 80% 30%,#0A3FB8 0,transparent 60%),var(--navy);color:#fff;min-height:100svh;display:flex;align-items:center;padding:7rem 0 4rem;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(0,208,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(0,208,255,.09) 1px,transparent 1px);background-size:3.2rem 3.2rem;mask-image:radial-gradient(circle at 70% 50%,#000 10%,transparent 70%);-webkit-mask-image:radial-gradient(circle at 70% 50%,#000 10%,transparent 70%);animation:grid 12s linear infinite}
+@keyframes grid{to{background-position:0 3.2rem,3.2rem 0}}
+#cv{position:absolute;inset:0;width:100%;height:100%}
+.hg{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+@media(max-width:900px){.hg{grid-template-columns:1fr;text-align:center}.hg .row,.hg .stats{justify-content:center}}
+.live{display:inline-flex;gap:.6rem;align-items:center;padding:.45rem 1rem;border-radius:99px;background:rgba(0,208,255,.12);border:1px solid rgba(0,208,255,.4);font-size:.85rem;font-weight:600;margin-bottom:1.4rem}
+.live i{width:.55rem;height:.55rem;border-radius:50%;background:var(--cy);animation:bl 1.2s infinite}
+@keyframes bl{50%{opacity:.2}}
+.hero h1 span{background:linear-gradient(90deg,#fff,var(--cy),#fff);background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 5s linear infinite}
+@keyframes sh{to{background-position:-200%}}
+.lead{font-size:clamp(1.05rem,1.6vw,1.3rem);color:#BFD3FF;max-width:34em;margin:1.4rem auto 2rem 0}
+@media(max-width:900px){.lead{margin-inline:auto}}
+.row{display:flex;gap:1rem;flex-wrap:wrap}
+.stats{display:flex;gap:2rem;margin-top:2.4rem;flex-wrap:wrap}
+.stats b{display:block;font:800 1.9rem Sora;color:var(--cy)}.stats span{font-size:.85rem;color:#BFD3FF}
+.orb{position:relative;aspect-ratio:1;width:min(100%,32rem);margin-inline:auto;display:grid;place-items:center}
+.ring{position:absolute;border-radius:50%;border:1.5px dashed rgba(0,208,255,.55);animation:spin 22s linear infinite}
+.r1{inset:0}.r2{inset:10%;animation-direction:reverse;animation-duration:15s;border-style:solid;border-color:rgba(0,87,255,.7) transparent}
+.r3{inset:22%;animation-duration:9s;border-color:rgba(255,255,255,.4)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tooth{width:46%;position:relative;filter:drop-shadow(0 0 1.6rem rgba(0,208,255,.8));animation:fl 5s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-.9rem)}}
+.scan{animation:sc 3s ease-in-out infinite}
+@keyframes sc{0%,100%{transform:translateY(0)}50%{transform:translateY(150px)}}
+.chip{position:absolute;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:.6rem 1rem;border-radius:1rem;font-size:.85rem;font-weight:700;animation:fl 4s ease-in-out infinite}
+.c1{top:6%;right:0}.c2{bottom:12%;left:-2%;animation-delay:-1.5s}.c3{bottom:2%;right:6%;animation-delay:-3s}
+.mq{background:var(--blue);color:#fff;overflow:hidden;white-space:nowrap;padding:1rem 0;font:600 1.05rem Sora}
+.mq div{display:inline-block;animation:mq 30s linear infinite}.mq span{margin:0 1.6rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+.sec{padding:clamp(4rem,9vw,7rem) 0}.ice{background:var(--ice)}
+.head{max-width:40rem;margin-bottom:3rem}.head p{color:var(--mut);margin-top:1rem}
+.rv{opacity:0;transform:translateY(2rem);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+.grid{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:1.6rem;padding:2rem;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(14rem circle at var(--mx,50%) var(--my,0),rgba(0,208,255,.25),transparent 70%);opacity:0;transition:opacity .3s}
+.card:hover{transform:translateY(-.4rem);box-shadow:0 1.6rem 3rem rgba(0,87,255,.18)}.card:hover::before{opacity:1}
+.card>*{position:relative}.card p{color:var(--mut);margin:.7rem 0 1.4rem;font-size:.97rem}
+.ic{width:3.4rem;height:3.4rem;border-radius:1rem;background:linear-gradient(135deg,var(--blue),var(--cy));display:grid;place-items:center;font-size:1.6rem;margin-bottom:1.2rem;color:#fff}
+.card a{font-weight:700;color:var(--blue);text-decoration:none}.card a:hover{text-decoration:underline}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+@media(max-width:900px){.cmp{grid-template-columns:1fr}}
+.stage{position:relative;aspect-ratio:16/10;border-radius:1.8rem;overflow:hidden;border:1px solid var(--line);box-shadow:0 2rem 4rem rgba(0,87,255,.2)}
+.stage svg{position:absolute;inset:0;width:100%;height:100%}
+.af{clip-path:inset(0 0 0 var(--p,50%))}
+.kn{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;background:#fff;box-shadow:0 0 1rem var(--cy);pointer-events:none}
+.kn::after{content:"↔";position:absolute;top:50%;left:50%;width:2.8rem;height:2.8rem;margin:-1.4rem;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800;box-shadow:0 0 1.2rem var(--cy)}
+.stage input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.lbl{position:absolute;top:1rem;padding:.3rem .8rem;border-radius:99px;background:rgba(3,21,61,.7);color:#fff;font-size:.8rem;font-weight:700;pointer-events:none}
+.tl{position:relative;display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));counter-reset:s}
+.st{background:#fff;border-radius:1.4rem;padding:1.6rem;border:1px solid var(--line);position:relative}
+.st::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:50%;background:var(--blue);color:#fff;font:800 1.1rem Sora;margin-bottom:1rem;box-shadow:0 0 0 .4rem rgba(0,87,255,.15)}
+.st p{color:var(--mut);font-size:.95rem;margin-top:.5rem}
+.quiz{background:linear-gradient(135deg,var(--navy),#0A3FB8);color:#fff;border-radius:2.2rem;padding:clamp(1.6rem,5vw,4rem);display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;position:relative;overflow:hidden}
+@media(max-width:900px){.quiz{grid-template-columns:1fr}}
+.quiz p.s{color:#BFD3FF;margin-top:1rem}
+.opts{display:grid;gap:.8rem}
+.opts button{font:700 1rem Manrope;text-align:left;padding:1.1rem 1.3rem;border-radius:1.1rem;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;transition:.2s}
+.opts button:hover{background:#fff;color:var(--blue);transform:translateX(.5rem)}
+.res{display:none}.res.on{display:block;animation:pop .5s}
+@keyframes pop{from{opacity:0;transform:scale(.9)}}
+.res .btn{margin-top:1.4rem}.rs{background:none;border:0;color:#BFD3FF;text-decoration:underline;cursor:pointer;font:600 .9rem Manrope;margin-left:1rem}
+details{border-bottom:1px solid var(--line);padding:1.3rem 0}
+summary{font:600 1.1rem Sora;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::after{content:"+";color:var(--blue);font-size:1.6rem;line-height:1;transition:transform .3s}
+details[open] summary::after{transform:rotate(135deg)}
+details p{color:var(--mut);margin-top:.8rem;max-width:44rem}
+.cta{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.fm{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+@media(max-width:900px){.fm{grid-template-columns:1fr}}
+form{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:2rem;border-radius:1.8rem;display:grid;gap:1rem}
+label{font-weight:700;font-size:.9rem;display:grid;gap:.4rem}
+.f,select{font:400 1rem Manrope;padding:.95rem 1rem;border-radius:.9rem;border:1px solid rgba(255,255,255,.3);background:rgba(3,21,61,.6);color:#fff;width:100%}
+.f:focus,select:focus{outline:none;border-color:var(--cy);box-shadow:0 0 0 3px rgba(0,208,255,.3)}
+.err{color:#FFB4B4;font-size:.82rem;min-height:1em}
+footer{background:#020D29;color:#8FA6D6;padding:2rem 0 6rem;font-size:.88rem}
+footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.fab{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:60;background:#25D366;color:#042;font-weight:800;text-decoration:none;padding:.9rem 1.3rem;border-radius:99px;box-shadow:0 .5rem 1.5rem rgba(0,0,0,.3);transform:translateY(8rem);transition:transform .4s}.fab.on{transform:none}
+.toast{position:fixed;left:50%;bottom:5.5rem;transform:translate(-50%,2rem);background:var(--navy);color:#fff;padding:.8rem 1.4rem;border-radius:1rem;opacity:0;pointer-events:none;transition:.3s;z-index:70;font-weight:600}.toast.on{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="w nav">
+<a class="logo" href="#topo"><svg width="28" height="28" viewBox="0 0 30 30" aria-hidden="true"><path d="M3 11c0-5 4-7 7-7 2 0 3.5 1 5 1s3-1 5-1c3 0 7 2 7 7 0 6-3 7-4 12-.5 3-2.5 3-3 0-.5-3-1.500-5-5-5s-4.500 2-5 5c-.5 3-2.500 3-3 0C6 18 3 17 3 11z" fill="#00D0FF"/></svg>Odonto Aurora</a>
+<button class="bg" id="bg" aria-label="Abrir menu" aria-expanded="false">☰</button>
+<ul id="mn"><li><a href="#tratamentos">Tratamentos</a></li><li><a href="#resultado">Resultados</a></li><li><a href="#como">Como funciona</a></li><li><a href="#simulador">Simulador</a></li><li><a href="#faq">Dúvidas</a></li></ul>
+<a class="btn" href="#agendar">Avaliação gratuita</a>
+</div></header>
+
+<main>
+<section class="hero" id="topo"><canvas id="cv"></canvas>
+<div class="w hg">
+<div>
+<div class="live"><i></i>Atendimento de segunda a sábado</div>
+<h1><span>Odontologia digital</span> para um sorriso que você vai querer mostrar.</h1>
+<p class="lead">Escaneamento 3D, simulação do resultado antes de começar e atendimento sem dor. Avaliação gratuita em Boa Vista.</p>
+<div class="row"><a class="btn" href="#agendar">Agendar avaliação gratuita</a><a class="btn ghost" href="#simulador">Ver meu tratamento ideal</a></div>
+<div class="stats"><div><b>R$ 0</b><span>na avaliação</span></div><div><b>18x</b><span>no cartão</span></div><div><b>Seg a sáb</b><span>atendimento</span></div></div>
+</div>
+<div class="orb" aria-hidden="true">
+<div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+<svg class="tooth" viewBox="0 0 200 220"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#9FD8FF"/></linearGradient><clipPath id="cp"><path id="tp" d="M20 70C20 25 55 12 80 12c10 0 14 6 20 6s10-6 20-6c25 0 60 13 60 58 0 45-22 52-28 100-3 25-18 25-22 0-4-28-8-48-30-48s-26 20-30 48c-4 25-19 25-22 0C42 122 20 115 20 70z"/></clipPath></defs>
+<use href="#tp" fill="url(#g)"/><g clip-path="url(#cp)"><rect class="scan" x="0" y="12" width="200" height="14" fill="#00D0FF" opacity=".55"/></g></svg>
+<div class="chip c1">Escaneamento 3D</div><div class="chip c2">Sem dor</div><div class="chip c3">Resultado simulado</div>
+</div>
+</div></section>
+
+<div class="mq" aria-hidden="true"><div><span>Implantes</span><span>✦</span><span>Lentes de contato</span><span>✦</span><span>Clareamento</span><span>✦</span><span>Alinhadores invisíveis</span><span>✦</span><span>Urgência</span><span>✦</span><span>Implantes</span><span>✦</span><span>Lentes de contato</span><span>✦</span><span>Clareamento</span><span>✦</span><span>Alinhadores invisíveis</span><span>✦</span><span>Urgência</span><span>✦</span></div></div>
+
+<section class="sec" id="tratamentos"><div class="w">
+<div class="head rv"><h2>Tecnologia a favor do seu sorriso</h2><p>Escolha o tratamento e fale direto com a nossa equipe.</p></div>
+<div class="grid" id="gr"></div>
+</div></section>
+
+<section class="sec ice" id="resultado"><div class="w cmp">
+<div class="rv"><h2>Veja a transformação em tempo real</h2><p style="color:var(--mut);margin:1rem 0 1.6rem;max-width:30rem">Arraste o controle. Antes de qualquer procedimento, você vê a simulação do seu resultado na tela.</p><a class="btn" href="#agendar">Quero simular o meu</a></div>
+<div class="stage rv" id="stg">
+<svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice"><rect width="400" height="250" fill="#CFE0FF"/><path d="M0 120Q200 30 400 120V250H0Z" fill="#7A9BD6"/><g fill="#D6C484"><rect x="45" y="95" width="50" height="80" rx="22"/><rect x="100" y="88" width="50" height="92" rx="22"/><rect x="155" y="84" width="50" height="98" rx="22" transform="rotate(-3 180 130)"/><rect x="210" y="86" width="50" height="96" rx="22" transform="rotate(4 235 130)"/><rect x="265" y="90" width="50" height="88" rx="22"/><rect x="320" y="96" width="40" height="76" rx="20"/></g></svg>
+<svg class="af" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice"><rect width="400" height="250" fill="#CFE0FF"/><path d="M0 120Q200 30 400 120V250H0Z" fill="#7A9BD6"/><g fill="#fff"><rect x="45" y="95" width="50" height="80" rx="22"/><rect x="100" y="88" width="50" height="92" rx="22"/><rect x="155" y="84" width="50" height="98" rx="22"/><rect x="210" y="84" width="50" height="98" rx="22"/><rect x="265" y="88" width="50" height="92" rx="22"/><rect x="320" y="95" width="40" height="80" rx="20"/></g></svg>
+<span class="lbl" style="right:1rem">Antes</span><span class="lbl" style="left:1rem">Depois</span>
+<div class="kn"></div><input type="range" min="2" max="98" value="50" id="rg" aria-label="Comparar antes e depois">
+</div></div></section>
+
+<section class="sec" id="como"><div class="w">
+<div class="head rv"><h2>Como funciona</h2><p>Quatro passos, sem burocracia e com preço combinado antes de começar.</p></div>
+<div class="tl">
+<div class="st rv"><h3>Contato no WhatsApp</h3><p>Resposta em minutos e horário reservado.</p></div>
+<div class="st rv"><h3>Avaliação digital</h3><p>Exame, fotos e escaneamento 3D gratuitos.</p></div>
+<div class="st rv"><h3>Plano e simulação</h3><p>Você vê o resultado e recebe o orçamento por escrito.</p></div>
+<div class="st rv"><h3>Tratamento</h3><p>Sessões confortáveis e acompanhamento depois da alta.</p></div>
+</div></div></section>
+
+<section class="sec ice" id="simulador"><div class="w"><div class="quiz rv">
+<div><h2>Qual tratamento é o ideal para você?</h2><p class="s">Escolha uma opção e enviamos sua avaliação pelo WhatsApp.</p></div>
+<div><div class="opts" id="op">
+<button data-t="clareamento" data-m="deixar os dentes mais brancos">Quero dentes mais brancos</button>
+<button data-t="lentes de contato dental" data-m="mudar o formato e a cor dos dentes">Quero mudar o formato dos dentes</button>
+<button data-t="implante" data-m="repor dentes que faltam">Perdi ou estou perdendo dentes</button>
+<button data-t="alinhadores invisíveis" data-m="alinhar os dentes sem aparelho de metal">Quero alinhar sem aparelho de metal</button></div>
+<div class="res" id="rs"><h3 id="rt"></h3><p class="s" id="rp"></p><a class="btn" id="rl" href="#" target="_blank" rel="noopener">Receber minha avaliação</a><button class="rs" id="rr">Refazer</button></div></div>
+</div></div></section>
+
+<section class="sec" id="faq"><div class="w" style="max-width:52rem">
+<div class="head rv"><h2>Dúvidas frequentes</h2></div>
+<details><summary>A avaliação é gratuita mesmo?</summary><p>Sim. Exame, escaneamento e orçamento sem custo e sem obrigação de fechar o tratamento.</p></details>
+<details><summary>Tenho medo de dentista. Vai doer?</summary><p>Usamos anestesia tópica e técnicas de conforto. Avise sobre a ansiedade no agendamento e reservamos mais tempo para você.</p></details>
+<details><summary>Posso parcelar?</summary><p>Em até 18 vezes no cartão, com valor total informado por escrito antes de começar.</p></details>
+<details><summary>Em quanto tempo vejo o resultado?</summary><p>O clareamento mostra diferença já na primeira sessão. Lentes, implantes e alinhadores têm prazos que explicamos na avaliação.</p></details>
+<details><summary>Atendem urgência?</summary><p>Sim. Chame no WhatsApp e encaixamos você o mais rápido possível.</p></details>
+</div></section>
+
+<section class="sec cta" id="agendar"><div class="w fm">
+<div class="rv"><h2>Garanta sua avaliação gratuita</h2><p style="color:#BFD3FF;margin-top:1rem;max-width:30rem">Um toque e você fala direto com a nossa equipe. Atendimento de segunda a sábado.</p></div>
+<div class="rv" style="display:grid;gap:1.2rem;justify-items:start"><a class="btn" id="cta" href="#" target="_blank" rel="noopener" style="font-size:1.2rem;padding:1.3rem 2.2rem">Chamar no WhatsApp agora</a><p style="color:#BFD3FF">Resposta em minutos. Sem compromisso.</p></div>
+</div></section>
+</main>
+<footer><div class="w"><span>Odonto Aurora · Rua Exemplo, 100, Centro, Boa Vista, RR</span><span>Resp. técnica: Dra. Helena Aurora · CRO-RR 0000</span></div></footer>
+<a class="fab" id="fab" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a>
+<div class="toast" id="ts"></div>
+
+<script>
+var NUM="5595999999999"; // TROQUE pelo WhatsApp da clínica (55 + DDD + número)
+function wa(t){return"https://wa.me/"+NUM+"?text="+encodeURIComponent(t)}
+function $(i){return document.getElementById(i)}
+$("fab").href=wa("Olá! Vim pelo site e quero agendar uma avaliação gratuita.");
+function toast(m){var t=$("ts");t.textContent=m;t.classList.add("on");setTimeout(function(){t.classList.remove("on")},2600)}
+$("bg").onclick=function(){var o=$("mn").classList.toggle("open");this.setAttribute("aria-expanded",o)};
+$("mn").onclick=function(e){if(e.target.tagName==="A")$("mn").classList.remove("open")};
+// tratamentos
+var T=[["🦷","Implantes","Dente fixo com planejamento 3D e cirurgia guiada."],["✨","Lentes de contato","Lâminas ultrafinas para mudar cor e formato."],["💎","Clareamento","Até 8 tons mais claros, com proteção contra sensibilidade."],["🔵","Alinhadores invisíveis","Alinhamento transparente com previsão em tela."],["⚡","Urgência","Dor ou dente quebrado? Atendimento rápido."]];
+$("gr").innerHTML=T.map(function(t){return'<div class="card rv"><div class="ic">'+t[0]+'</div><h3>'+t[1]+'</h3><p>'+t[2]+'</p><a target="_blank" rel="noopener" href="'+wa("Olá! Quero saber mais sobre "+t[1].toLowerCase()+".")+'">Falar sobre '+t[1].toLowerCase()+'</a></div>'}).join("");
+document.querySelectorAll(".card").forEach(function(c){c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect();c.style.setProperty("--mx",e.clientX-r.left+"px");c.style.setProperty("--my",e.clientY-r.top+"px")})});
+// reveal
+var io=new IntersectionObserver(function(es){es.forEach(function(e,i){if(e.isIntersecting){setTimeout(function(){e.target.classList.add("in")},i*80);io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll(".rv").forEach(function(e){io.observe(e)});
+// slider
+var rg=$("rg"),sg=$("stg");rg.oninput=function(){sg.style.setProperty("--p",rg.value+"%")};
+var pt=0,iv=setInterval(function(){pt++;rg.value=50+Math.sin(pt/9)*35;rg.oninput();if(pt>70)clearInterval(iv)},40);
+rg.addEventListener("pointerdown",function(){clearInterval(iv)});
+// contadores
+document.querySelectorAll("[data-n]").forEach(function(el){var n=+el.dataset.n,s=0,i=setInterval(function(){s+=Math.ceil(n/50);if(s>=n){s=n;clearInterval(i);el.textContent=n>999?"+"+n.toLocaleString("pt-BR"):n}else el.textContent=s},30)});
+// quiz
+$("op").onclick=function(e){var b=e.target.closest("button");if(!b)return;
+$("rt").textContent="Indicação: "+b.dataset.t;
+$("rp").textContent="Na avaliação gratuita confirmamos se é o melhor caminho para "+b.dataset.m+" e passamos prazo e valor.";
+$("rl").href=wa("Olá! Fiz o simulador no site e quero "+b.dataset.m+". Indicação: "+b.dataset.t+".");
+this.style.display="none";$("rs").classList.add("on")};
+$("rr").onclick=function(){$("rs").classList.remove("on");$("op").style.display="grid"};
+// todos os botões de agendar vão direto ao WhatsApp
+document.querySelectorAll('a[href="#agendar"],#cta').forEach(function(a){a.href=wa("Olá! Vim pelo site e quero agendar minha avaliação gratuita.");a.target="_blank";a.rel="noopener"});
+addEventListener("scroll",function(){$("fab").classList.toggle("on",scrollY>500)},{passive:true});
+// partículas
+(function(){var c=$("cv"),x=c.getContext("2d"),P=[],W,H,m={x:-999,y:-999};
+function rs(){var d=devicePixelRatio||1;W=c.width=c.offsetWidth*d;H=c.height=c.offsetHeight*d;P=[];for(var i=0;i<Math.min(90,W*H/22000);i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5*d,vy:(Math.random()-.5)*.5*d})}
+rs();addEventListener("resize",rs);
+c.parentNode.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect(),d=devicePixelRatio||1;m.x=(e.clientX-r.left)*d;m.y=(e.clientY-r.top)*d});
+function f(){x.clearRect(0,0,W,H);var L=(devicePixelRatio||1)*120;
+P.forEach(function(p,i){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+x.fillStyle="rgba(0,208,255,.8)";x.beginPath();x.arc(p.x,p.y,1.6*(devicePixelRatio||1),0,7);x.fill();
+for(var j=i+1;j<P.length;j++){var q=P[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<L){x.strokeStyle="rgba(0,208,255,"+(1-d/L)*.35+")";x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}
+var dm=Math.hypot(p.x-m.x,p.y-m.y);if(dm<L*1.4){x.strokeStyle="rgba(255,255,255,"+(1-dm/(L*1.4))*.6+")";x.beginPath();x.moveTo(p.x,p.y);x.lineTo(m.x,m.y);x.stroke()}});
+requestAnimationFrame(f)}
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches)f()})();
+</script>
+</body>
+</html>
